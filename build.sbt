@@ -10,6 +10,7 @@ useGpg := true
 
 libraryDependencies ++= Seq(
   "org.scalaz" %% "scalaz-core" % "7.0.0-RC1",
+  "org.scalaz" %% "scalaz-scalacheck-binding" % "7.0.0-RC1" % "test",
   "org.specs2" %% "specs2" % "1.14" % "test",
   "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
 )
@@ -17,4 +18,15 @@ libraryDependencies ++= Seq(
 resolvers ++= Seq(
   "oss snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
   "oss releases" at "http://oss.sonatype.org/content/repositories/releases"
+)
+
+scalacOptions ++= Seq(
+  "-deprecation",
+  "-unchecked",
+  "-optimise",
+  "-Yinline-warnings",
+  "-feature",
+  "-language:implicitConversions",
+  "-language:higherKinds",
+  "-language:postfixOps"
 )
