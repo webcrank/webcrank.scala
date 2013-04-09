@@ -59,7 +59,7 @@ If you want to get involved, anything is helpful, so don't be shy. If you
 are looking for something small to start with:
  * The issues page should be full of things to look at.
  * Grab the code and grep for FIX, some of them will just be
-   questions, but their should be some low hanging fruit.
+   questions, but there should be some low hanging fruit.
  * Help with planning is always appreciated. Look at webmachine and
    what we are missing. Describing features required to implement
    the debugging tools would be incredibly useful.
