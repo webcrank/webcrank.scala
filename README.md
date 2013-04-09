@@ -42,6 +42,16 @@ important then the rules):
  * Mark any transitory, experimental or questionable code with a FIX tag.
  * Try to do a sweep for FIX tags before marking anything as done.
 
+
+Dependencies
+------------
+
+It would be nice to keep these down, but if something is really needed
+pull it in. `scalaz`, `shapeless` and `scalaz-contrib` related things
+are fine. _name your rubbish java library here_ should be
+avoided.
+
+
 Collaboration
 -------------
 
@@ -61,12 +71,3 @@ If you are looking for something big, even better, but it might be worth
 letting someone know what you are working on so there are no clashes. If
 it is helpful, yell and you can get a commit bit to create a branch for
 what ever you want to work on.
-
-
-Dependencies
-------------
-
-It would be nice to keep these down, but if something is really needed
-pull it in. `scalaz`, `shapeless` and `scalaz-contrib` related things
-are fine. _name your rubbish java library here_ should be
-avoided.
