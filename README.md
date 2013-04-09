@@ -15,8 +15,8 @@ Build
 [Travis](https://travis-ci.org/webcrank/webcrank.scala) [![Build Status](https://travis-ci.org/webcrank/webcrank.scala.png)](https://travis-ci.org/webcrank/webcrank.scala)
 
 
-Development and Collaboration
------------------------------
+Development
+-----------
 
 In order to organise development, this project relies heavily on
 [github issues](https://github.com/webcrank/webcrank.scala/issues). Anything
@@ -30,8 +30,9 @@ things like `Tests`, `Doc`, `Benchmark` and `FIX Sweep`.
 There are not too many rules for the code. Just keep it neat and tidy,
 and don't be upset if someone sweeps in after you to do re-organisation.
 
-Some basic rules that are nice to follow, but always remember good
-(read as: verifiably correct) code is more important then the rules:
+For those that want some guidance here are some obvious rules (but
+always remember good, read as: verifiably correct, code is more
+important then the rules):
  * Types are good.
  * Tidy is good.
  * Duplication is bad.
@@ -40,6 +41,9 @@ Some basic rules that are nice to follow, but always remember good
  * But, __correct__ is better than everything.
  * Mark any transitory, experimental or questionable code with a FIX tag.
  * Try to do a sweep for FIX tags before marking anything as done.
+
+Collaboration
+-------------
 
 If you want to get involved, anything is helpful, so don't be shy. If you
 are looking for something small to start with:
