@@ -2,7 +2,7 @@ package webcrank
 package test
 
 import scalaz.Show, scalaz.syntax.show._
-import org.scalacheck.{Pretty, Gen, Arbitrary}
+import org.scalacheck.{Pretty, Gen, Arbitrary}, Arbitrary.arbitrary
 
 trait WebcrankArbitraries {
   /*
@@ -28,9 +28,14 @@ trait WebcrankArbitraries {
   def genUnicodeChar: Gen[Char] = Gen.oneOf(validUnicodeChars)
   def genUnicodeString: Gen[String] = Gen.listOf(genUnicodeChar).map(_.mkString)
 
-  implicit def CaseInsensitiveArbitrary = Arbitrary(genUnicodeString map CaseInsensitive.apply)
+  implicit def ShowPretty[A: Show](a: A): Pretty =
+    Pretty(_ => a.shows)
 
-  implicit def ShowPretty[A: Show](a: A): Pretty = Pretty { _ => a.shows }
+  implicit def CaseInsensitiveArbitrary =
+    Arbitrary(genUnicodeString map CaseInsensitive.apply)
+
+  implicit def StatusCodeArbitrary =
+    Arbitrary(arbitrary[Int] map StatusCode.apply)
 }
 
 object WebcrankArbitrary extends WebcrankArbitraries
