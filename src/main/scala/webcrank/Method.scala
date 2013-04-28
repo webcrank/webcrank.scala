@@ -17,16 +17,7 @@ object Method {
   case class ExtensionMethod(token: String) extends Method
 
   implicit val MethodShow =
-    Show.shows[Method](_ match {
-      case Options => "OPTIONS"
-      case Get => "GET"
-      case Head => "HEAD"
-      case Post => "POST"
-      case Put => "PUT"
-      case Delete => "DELETE"
-      case Connect => "CONNECT"
-      case ExtensionMethod(token) => token
-    })
+    Show.showFromToString[Method]
 
   implicit val MethodEqual =
     Equal.equalA[Method]

@@ -13,6 +13,7 @@ import scalaz._, Scalaz._
  *   - [RFC-reschke-http-status-308-0](http://tools.ietf.org/html/draft-reschke-http-status-308-07)
  *   - [RFC6585](http://tools.ietf.org/html/rfc6585)
  */
+// FIX add message?
 case class StatusCode(code: Int)
 
 object StatusCode {

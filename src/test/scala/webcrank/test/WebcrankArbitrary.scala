@@ -22,6 +22,12 @@ trait WebcrankArbitraries {
       (98, oneOf(Options, Get, Head, Post, Put, Delete, Trace, Connect)),
       (2, genHttpToken map (ExtensionMethod.apply))
     ))
+
+  implicit def HttpVersionArbitrary =
+   Arbitrary(frequency(
+      (9, oneOf(HttpVersion.Http09, HttpVersion.Http10, HttpVersion.Http11)),
+      (1, arbitrary[(Int, Int)] map (HttpVersion.apply _).tupled)
+    ))
 }
 
 object WebcrankArbitrary extends WebcrankArbitraries

@@ -2,7 +2,7 @@ package webcrank
 
 import scalaz._, Scalaz._
 
-// FIX Name? Generalize to something like IsString?
+// FIX Derp. Found more general implementation in scalaz.
 case class CaseInsensitive(value: String) {
   lazy val toLower = value
 
