@@ -1,4 +1,5 @@
 package webcrank
+package data
 
 // FIX Complete.
 sealed trait Body

@@ -1,4 +1,5 @@
 package webcrank
+package data
 
 import Cookie._
 

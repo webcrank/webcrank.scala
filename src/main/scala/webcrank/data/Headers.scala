@@ -1,4 +1,5 @@
 package webcrank
+package data
 
 // FIX Data structure for headers?
 case class Headers(headers: Map[CaseInsensitive, Header]) {

@@ -1,4 +1,5 @@
 package webcrank
+package data
 
 case class Header(name: CaseInsensitive, values: Vector[String]) {
   def get: Option[String] =

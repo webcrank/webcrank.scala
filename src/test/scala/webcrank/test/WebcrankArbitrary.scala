@@ -1,6 +1,7 @@
 package webcrank
 package test
 
+import data._
 import scalaz.Show, scalaz.syntax.show._
 import org.scalacheck.{Pretty, Gen, Arbitrary}, Arbitrary.arbitrary, Gen.{frequency, oneOf}
 import UnicodeArbitrary._
