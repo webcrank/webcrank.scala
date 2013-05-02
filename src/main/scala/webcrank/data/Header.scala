@@ -1,7 +1,9 @@
 package webcrank
 package data
 
-case class Header(name: CaseInsensitive, values: Vector[String]) {
+import scalaz.CaseInsensitive
+
+case class Header(name: CaseInsensitive[String], values: Vector[String]) {
   def get: Option[String] =
     values.headOption
 
