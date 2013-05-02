@@ -14,10 +14,15 @@ trait WebcrankArbitraries {
     Pretty(_ => a.shows)
 
   implicit def VectorArbitrary[A: Arbitrary] =
-    Arbitrary(arbitrary[List[A]] map (_.toVector))
+    Arbitrary(arbitrary[List[A]] map (Vector.empty ++ _))
 
   implicit def StatusCodeArbitrary =
     Arbitrary(arbitrary[Int] map StatusCode.apply)
+
+  implicit def IpArbitrary =
+    Arbitrary(arbitrary[(Int, Int, Int, Int)] map {
+      case (a, b, c, d) => Ip(List(a, b, c, d).map(_ % 256).mkString("."))
+    })
 
   implicit def MethodArbitrary: Arbitrary[Method] =
     Arbitrary(frequency(
